@@ -11,7 +11,7 @@ function preload()
 function setup() {
   createCanvas(500,500);
   database = firebase.database();
-  foodStock=database.ref("Food").on("value",readStock)
+  database.ref("Food").on("value",readStock)
 
   dog=createSprite(250,250,5,5)
   scale(-300)
